@@ -11,7 +11,7 @@ export class UserService {
 
   // tslint:disable-next-line: typedef
   save(user: firebase.User){
-    this.db.object('/users/' + user.uid).set({
+    this.db.object('/users/' + user.uid).update({
       name: user.displayName,
       email: user.email
     });
